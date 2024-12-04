@@ -1,0 +1,15 @@
+trigger:
+- main  # Branch to trigger the pipeline
+
+pool:
+  vmImage: 'ubuntu-latest'  # Specify the VM image
+
+steps:
+- script: echo "Starting the pipeline"
+  displayName: 'Pipeline Initialization'
+
+- script: echo "Running the build process..."
+  displayName: 'Build Step'
+
+- script: echo "Pipeline complete!"
+  displayName: 'Completion Step'
